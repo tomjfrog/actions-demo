@@ -34,8 +34,6 @@ jobs:
         run: |
           jf rt ping
 
-#      - name: Build Our Project
-#        run: |
-#          jf gradle-config
-
-
+      - name: Build Our Project
+        run: |
+          jf gradle build --build-name asaf-test --build-number ${{ github.run_number }}
