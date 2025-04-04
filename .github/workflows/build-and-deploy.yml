@@ -34,3 +34,8 @@ jobs:
         run: |
           jf rt ping
 
+#      - name: Build Our Project
+#        run: |
+#          jf gradle-config
+
+

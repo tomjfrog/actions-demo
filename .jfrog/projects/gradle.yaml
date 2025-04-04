@@ -1,0 +1,11 @@
+version: 1
+type: gradle
+resolver:
+    repo: asaftest-gradle-dev
+    serverId: tomjfrog
+deployer:
+    repo: asaftest-gradle-dev
+    serverId: tomjfrog
+    ivyPattern: '[organization]/[module]/ivy-[revision].xml'
+    artifactPattern: '[organization]/[module]/[revision]/[artifact]-[revision](-[classifier]).[ext]'
+useWrapper: true
