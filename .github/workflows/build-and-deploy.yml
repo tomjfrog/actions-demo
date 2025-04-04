@@ -34,6 +34,12 @@ jobs:
         run: |
           jf rt ping
 
+      - name: Configure Gradle Integration
+        run: |
+          jf gradle-config \
+          --repo-resolve asaftest-gradle-dev \
+          --repo-deploy asaftest-gradle-dev \
+
       - name: Build Our Project
         run: |
           jf gradle build --build-name asaf-test --build-number ${{ github.run_number }}
