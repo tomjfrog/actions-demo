@@ -42,8 +42,9 @@ jobs:
 
       - name: Build Our Project
         run: |
-          jf gradle build --build-name asaf-test --build-number ${{ github.run_number }}
+          jf gradle build artifactoryPublish
 
-      - name: Publish Build Info
+      - name: Decorate and Publish Build Info
         run: |
-          jf rt build-publish asaf-test ${{ github.run_number }}
+          jf rt build-add-git
+          jf rt build-publish
