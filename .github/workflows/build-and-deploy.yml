@@ -42,4 +42,8 @@ jobs:
 
       - name: Build Our Project
         run: |
-          jf gradle build --build-name asaf-test --build-number ${{ github.run_number }}
+          jf gradle build --build-name asaf-test --build-number 
+
+      - name: Publish Build Info
+        run: |
+          jf rt build-publish asaf-test ${{ github.run_number }}
